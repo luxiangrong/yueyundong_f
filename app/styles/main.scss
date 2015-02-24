@@ -1,0 +1,249 @@
+// 自定义bootstrap的变量
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+$font-family-sans-serif: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", Arial, sans-serif !default;
+$font-family-serif: Georgia, "Times New Roman", Times, serif !default;
+$grid-gutter-width: 0px;
+$link-color: #666666; 
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+a, .btn-link {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+
+// 重置box-sizing为content-box
+* {
+    @include box-sizing(content-box);
+}
+*:before, *:after {
+    @include box-sizing(content-box);
+}
+.container {
+    width: 1000px !important;
+    &.container-fluid {
+        width: 100% !important;
+    }
+}
+// 自定义按钮样式
+// 背景色为黄色的按钮
+.btn-a {
+    @include button-variant(#ffffff, #e39300, #e39300);
+}
+.navbar-default {
+    background-color: #393939;
+    margin-bottom: 0;
+    border-radius: 0;
+    border: none;
+    .navbar-header {
+        margin-right: 20px;
+        .navbar-brand {
+            padding: 0px;
+            height: auto;
+            .border-box {
+                padding: 12px 15px;
+            }
+        }
+    }
+    .navbar-nav {
+        line-height: 60px;
+        & > li {
+            a {
+                color: #999999;
+                line-height: 36px;
+                height: 36px;
+                padding-top: 0;
+                padding-bottom: 0;
+                margin-top: 12px;
+                border-radius: 3px;
+                &:hover {
+                    color: lighten(#999999, 25%);
+                }
+            }
+            &.active {
+                a {
+                    color: #e5e5e5;
+                    background-color: #555555;
+                    &:hover {
+                        color: lighten(#999999, 25%);
+                        background-color: #555555;
+                    }
+                }
+            }
+            &.divider {
+                color: #666666;
+                padding-left: 24px;
+                padding-right: 24px;
+                &.divider-full-height {
+                    border-left: 1px solid #444343;
+                    border-right: 1px solid #313131;
+                    height: 60px;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                }
+            }
+        }
+    }
+}
+.banner {
+    overflow: hidden;
+    height: 418px;
+    position: relative;
+    .bg {
+        height: 100%;
+        min-width: 100%;
+        position: absolute;
+        left: 50%;
+        margin-left: -960px;
+        z-index: 0;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+        color: #ffffff;
+        h1 {
+            margin-top: 128px;
+            font-weight: normal;
+            p {
+                color: #ffffff;
+                margin-top: 25px;
+                margin-bottom: 25px;
+            }
+        }
+        .btn-a {
+            font-size: 22px;
+            padding: 15px 55px;
+            letter-spacing: 5px;
+        }
+    }
+}
+#functions {
+  padding-bottom: 100px;
+    .title {
+        font-size: 22px;
+        margin: 60px auto;
+        text-align: center;
+        font-weight: normal;
+    }
+    .function-1, .function-2, .function-3, {
+        text-align: center;
+        .color-box {
+            width: 258px;
+            height: 123px;
+            line-height: 123px;
+            border-radius: 12px;
+            color: #fff;
+            .iconfont {
+                font-size: 56px;
+            }
+        }
+        h4 {
+            font-size: 22px;
+            margin-top: 20px;
+            margin-bottom: 25px;
+        }
+        p {
+            font-size: 12px;
+            border-top: 1px dotted #b2b2b2;
+            padding-top: 22px;
+            text-align: left;
+        }
+    }
+    .function-1 {
+        > .content-box {
+            padding-left: 0px;
+            padding-right: 74px;
+        }
+        .color-box {
+            background-color: #549ed1;
+        }
+        h4 {
+            color: #549ed1;
+        }
+    }
+    .function-2 {
+        > .content-box {
+            padding-left: 38px;
+            padding-right: 38px;
+        }
+        .color-box {
+            background-color: #cc942e;
+        }
+        h4 {
+            color: #cc942e;
+        }
+    }
+    .function-3 {
+        > .content-box {
+            padding-right: 0px;
+            padding-left: 74px;
+        }
+        .color-box {
+            background-color: #87b33d;
+        }
+        h4 {
+            color: #87b33d;
+        }
+    }
+}
+#comments {
+  border-top: 1px solid #e5e5e5;
+  background: #f4f4f4 url(../images/yinying_01.png) no-repeat center top;
+    .title {
+        font-size: 22px;
+        margin: 30px auto;
+        text-align: center;
+        font-weight: normal;
+    }
+    .media-left {
+        width: 20%;
+        margin-right: 20px;
+        a {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+    }
+    .media-body {
+      p {
+        i {
+          font-weight: bold;
+          font-style: normal;
+        }
+      }
+    }
+}
+
+
+.site-map {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  ul {
+    list-style: none;
+    font-size: $font-size-small;
+    li {
+      margin: 10px 0;
+      a {
+      }
+    }
+    .cate {
+      font-size: $font-size-large;
+      margin-bottom: 12px;
+    }
+    &.content-box-2 {
+      margin-left: 50px;
+    }
+    &.content-box-3 {
+      margin-left: 100px;
+    }
+    &.content-box-4 {
+      margin-left: 110px;
+    }
+  }
+}

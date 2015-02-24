@@ -1,0 +1,15 @@
+{
+  "name": "yueyundong-f",
+  "private": true,
+  "dependencies": {
+  	"jquery": "= 1.11.2",
+    "bootstrap-sass-official": "~3.3.2",
+    "modernizr": "~2.8.2",
+    "respondJS": "git://github.com/scottjehl/Respond",
+    "art-dialog": "~6.0.4",
+    "smalot-bootstrap-datetimepicker": "=2.3.1",
+    "fullcalendar": "=2.0.3",
+    "highcharts": "~4.1.1",
+    "OwlCarousel": "git://github.com/OwlFonk/OwlCarousel"
+  }
+}
