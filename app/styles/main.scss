@@ -3,7 +3,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 $font-family-sans-serif: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", Arial, sans-serif !default;
 $font-family-serif: Georgia, "Times New Roman", Times, serif !default;
 $grid-gutter-width: 0px;
-$link-color: #666666; 
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
@@ -12,9 +11,6 @@ a, .btn-link {
         text-decoration: none;
     }
 }
-
-
-
 // 重置box-sizing为content-box
 * {
     @include box-sizing(content-box);
@@ -28,10 +24,30 @@ a, .btn-link {
         width: 100% !important;
     }
 }
+body {
+    padding-top: 60px;
+}
 // 自定义按钮样式
 // 背景色为黄色的按钮
 .btn-a {
     @include button-variant(#ffffff, #e39300, #e39300);
+}
+// 背景色为蓝色的按钮
+.btn-b {
+    @include button-variant(#ffffff, #1b76cd, #1b76cd);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+// 背景色为蓝色的按钮，并增加了一点padding
+.btn-c {
+    @include button-variant(#666666, #e3e3e3, #c8c8c8);
+    letter-spacing: 5px;
+}
+// 背景色为蓝色的按钮，并增加了一点padding
+.btn-d {
+    @include button-variant(#ffffff, #1c86cf, #1c86cf);
+    padding-top: 9px;
+    padding-bottom: 8px;
 }
 .navbar-default {
     background-color: #393939;
@@ -92,18 +108,12 @@ a, .btn-link {
     overflow: hidden;
     height: 418px;
     position: relative;
-    .bg {
-        height: 100%;
-        min-width: 100%;
-        position: absolute;
-        left: 50%;
-        margin-left: -960px;
-        z-index: 0;
-    }
+    background: url(../images/banner_01.jpg) no-repeat center 60px fixed;
     .container {
         position: relative;
         z-index: 1;
         color: #ffffff;
+        height: 418px;
         h1 {
             margin-top: 128px;
             font-weight: normal;
@@ -118,10 +128,15 @@ a, .btn-link {
             padding: 15px 55px;
             letter-spacing: 5px;
         }
+        .device {
+            position: absolute;
+            bottom: 0px;
+            right: -56px;
+        }
     }
 }
 #functions {
-  padding-bottom: 100px;
+    padding-bottom: 100px;
     .title {
         font-size: 22px;
         margin: 60px auto;
@@ -190,8 +205,8 @@ a, .btn-link {
     }
 }
 #comments {
-  border-top: 1px solid #e5e5e5;
-  background: #f4f4f4 url(../images/yinying_01.png) no-repeat center top;
+    border-top: 1px solid #e5e5e5;
+    background: #f4f4f4 url(../images/yinying_01.png) no-repeat center top;
     .title {
         font-size: 22px;
         margin: 30px auto;
@@ -211,39 +226,214 @@ a, .btn-link {
         }
     }
     .media-body {
-      p {
-        i {
-          font-weight: bold;
-          font-style: normal;
+        p {
+            .iconfont {
+                color: #999999;
+                &.icon-quote-left {
+                    margin-right: 5px;
+                }
+                &.icon-quote-right {
+                    margin-left: 5px;
+                }
+            }
         }
-      }
+    }
+    .say-team-title {
+        text-align: center;
+        margin: 30px 0;
+        a {
+            color: #cccccc;
+            &:hover, &:focus {
+                color: darken(#cccccc, 20%);
+            }
+        }
+    }
+    .say-team-list {
+        list-style: none;
+        @include clearfix();
+        li {
+            float: left;
+            width: 25%;
+            text-align: center;
+            margin-bottom: 20px;
+            opacity: 0.6;
+            &:hover {
+                opacity: 1;
+            }
+            a {
+                img {
+                    height: 50px;
+                }
+            }
+        }
     }
 }
-
-
+.who-use {
+    background: url(../images/bg_01.jpg) center center;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 150px;
+    .who-use-title {
+        font-size: 22px;
+        margin: 80px 0 100px;
+    }
+    .who-use-list {
+        list-style: none;
+        li {
+            float: left;
+            width: 20%;
+            .iconfont {
+                font-size: 32px;
+            }
+        }
+    }
+}
 .site-map {
-  padding-top: 40px;
-  padding-bottom: 80px;
-  ul {
-    list-style: none;
-    font-size: $font-size-small;
-    li {
-      margin: 10px 0;
-      a {
-      }
+    padding-top: 40px;
+    padding-bottom: 80px;
+    ul {
+        list-style: none;
+        font-size: $font-size-small;
+        li {
+            margin: 10px 0;
+            a {
+                color: #666666;
+                &:hover, &:focus {
+                    color: darken(#666666, 30%);
+                }
+            }
+        }
+        .cate {
+            font-size: $font-size-large;
+            margin-bottom: 12px;
+        }
+        &.content-box-2 {
+            margin-left: 50px;
+        }
+        &.content-box-3 {
+            margin-left: 100px;
+        }
+        &.content-box-4 {
+            margin-left: 110px;
+        }
     }
-    .cate {
-      font-size: $font-size-large;
-      margin-bottom: 12px;
+}
+.register {
+    border-bottom: 1px solid #e6e6e6;
+    .container {
+        padding: 56px 36px;
+        color: #666666;
+        h3 {
+            border-bottom: 3px solid #e4e4e4;
+            padding-bottom: 14px;
+            margin-bottom: 56px;
+        }
+        .form-control-static {
+            &.align-right {
+                text-align: right;
+                margin-right: -28px;
+            }
+            &.note {
+                margin-left: 10px;
+                color: #999999;
+            }
+        }
     }
-    &.content-box-2 {
-      margin-left: 50px;
+    .form-horizontal {
+        .control-label {
+            padding-top: 10px;
+            font-weight: normal;
+            margin-right: 25px;
+        }
     }
-    &.content-box-3 {
-      margin-left: 100px;
+    .form-control {
+        height: 26px;
     }
-    &.content-box-4 {
-      margin-left: 110px;
+    .input-group {
+        .input-group-btn {
+            padding-left: 26px;
+            .btn {
+                padding-top: 10px;
+                padding-bottom: 9px;
+            }
+        }
     }
-  }
+    .form-control-content-box {
+        padding-right: 26px;
+    }
+}
+.register-success {
+    text-align: center;
+    margin: 130px 0;
+    .iconfont {
+        color: #1c86cf;
+        font-size: 64px;
+    }
+}
+.login {
+    .container {
+        width: 600px !important;
+        padding: 0px 28px 50px;
+        color: #666666;
+        border: 1px solid #e6e6e6;
+        margin: 100px auto;
+        .iconfont {
+            font-size: 18px;
+            color: #777680;
+        }
+        h3 {
+            border-bottom: 3px solid #e4e4e4;
+            padding-bottom: 14px;
+            margin-bottom: 56px;
+        }
+        .form-control-content-box {
+            padding-right: 26px;
+        }
+        .form-control {
+            height: 26px;
+        }
+        .btn-d {
+            font-size: 16px;
+            &.btn-padding {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+        .help-block {
+            color: #a1a1a1;
+            margin-top: 20px;
+        }
+        .split {
+            border-bottom: 1px solid #e4e4e4;
+            margin-bottom: 30px;
+            height: 1px;
+        }
+        .control-label {
+            padding-top: 10px;
+            font-weight: normal;
+            margin-right: 25px;
+        }
+        .reset-password-success {
+            text-align: center;
+            margin: 30px 0;
+            .iconfont {
+                color: #e39300;
+                font-size: 64px;
+            }
+            .text-email {
+                color: #e39300;
+                &:hover,
+                &:focus {
+                    color: lighter(#e39300, 20%);
+                }
+            }
+        }
+        .text-muted {
+            color: #999999;
+                &:hover,
+                &:focus {
+                    color: lighter(#999999, 20%);
+                }
+        }
+    }
 }
