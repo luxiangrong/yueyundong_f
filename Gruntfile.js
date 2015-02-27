@@ -376,6 +376,20 @@ module.exports = function (grunt) {
         'imagemin',
         'svgmin'
       ]
+    },
+
+    // deploy the resource to ftp
+    'ftp-deploy': {
+      build: {
+        auth: {
+          host: 'tfr256720.soso.bj.cn',
+          port: 21,
+          authKey: 'tfr256720'
+        },
+        src: 'dist',
+        dest: '/yydf',
+        exclusions: []
+      }
     }
   });
 
@@ -429,14 +443,19 @@ module.exports = function (grunt) {
     'uglify',
     'copy:dist',
     'modernizr',
-    'rev',
+    //'rev',
     'usemin',
-    'htmlmin'
+    //'htmlmin'
   ]);
 
   grunt.registerTask('default', [
     'newer:jshint',
     'test',
     'build'
+  ]);
+
+  grunt.registerTask('deploy',[
+    'build',
+    'ftp-deploy'
   ]);
 };
