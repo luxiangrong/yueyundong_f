@@ -19,9 +19,6 @@
 .icon-tianxie:before { content: "\e601"; }
 .icon-yundong:before { content: "\e602"; }
 .icon-suozi:before { content: "\e603"; }
-.icon-suozi {
-  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe603;');
-}
 .icon-dianhua:before { content: "\e604"; }
 .icon-duibifenxi:before { content: "\e605"; }
 .icon-shipin:before { content: "\e606"; }
@@ -30,15 +27,22 @@
 .icon-bbgzhinan:before { content: "\e609"; }
 .icon-youxiang:before { content: "\e60a"; }
 .icon-zhuce:before { content: "\e60b"; }
+.icon-right:before { content: "\e61e"; }
 .icon-leduhui:before { content: "\e60c"; }
+.icon-tiyanfuwu:before { content: "\e61c"; }
 .icon-04bianji:before { content: "\e60d"; }
 .icon-TmServe:before { content: "\e60e"; }
 .icon-xinlang:before { content: "\e60f"; }
 .icon-yinsi:before { content: "\e610"; }
+.icon-weiyuyue:before { content: "\e618"; }
 .icon-iconfontquanbuxiaoxizhengchang1:before { content: "\e611"; }
+.icon-shuaxin:before { content: "\e61d"; }
 .icon-shuxian:before { content: "\e617"; }
 .icon-guanlizhongxin:before { content: "\e612"; }
-.icon-shipin1:before { content: "\e613"; }
+.icon-ok:before { content: "\e619"; }
+.icon-yingpian:before { content: "\e613"; }
 .icon-tiyujianshen:before { content: "\e614"; }
 .icon-huiyuan:before { content: "\e615"; }
+.icon-quote-left:before { content: "\e61a"; }
+.icon-quote-right:before { content: "\e61b"; }
 .icon-queren:before { content: "\e616"; }

@@ -3,6 +3,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 $font-family-sans-serif: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", Arial, sans-serif !default;
 $font-family-serif: Georgia, "Times New Roman", Times, serif !default;
 $grid-gutter-width: 0px;
+@import "iconfont.css";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
@@ -538,13 +539,13 @@ body {
             text-align: center;
             margin: 30px 0;
             .iconfont {
-                color: #e39300;
+                color: #1c86cf;
                 font-size: 64px;
             }
             .text-email {
-                color: #e39300;
+                color: #1c86cf;
                 &:hover, &:focus {
-                    color: lighter(#e39300, 20%);
+                    color: lighter(#1c86cf, 20%);
                 }
             }
         }
